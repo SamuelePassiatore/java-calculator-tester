@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.java.calculator.CalculatorTest" time="0.068" tests="6" errors="0" skipped="1" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="org.java.calculator.EmployeeTest" time="0.006" tests="4" errors="4" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -58,14 +58,24 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="getSubtractTest" classname="org.java.calculator.CalculatorTest" time="0.028"/>
-  <testcase name="getDivideIntTest" classname="org.java.calculator.CalculatorTest" time="0"/>
-  <testcase name="getAddTest" classname="org.java.calculator.CalculatorTest" time="0.001"/>
-  <testcase name="getDivideTest" classname="org.java.calculator.CalculatorTest" time="0"/>
-  <testcase name="getMultiplyTest" classname="org.java.calculator.CalculatorTest" time="0"/>
-  <testcase name="getDivideExceptionTest" classname="org.java.calculator.CalculatorTest" time="0">
-    <skipped message="Assumption failed: assumption is not true" type="org.opentest4j.TestAbortedException">org.opentest4j.TestAbortedException: Assumption failed: assumption is not true
-	at org.java.calculator.CalculatorTest.getDivideExceptionTest(CalculatorTest.java:89)
-</skipped>
+  <testcase name="getEmployeeWithInvalidRuleTest" classname="org.java.calculator.EmployeeTest" time="0.001">
+    <error message="Il ruolo deve essere &apos;employee&apos; o &apos;boss&apos;" type="java.lang.Exception">java.lang.Exception: Il ruolo deve essere 'employee' o 'boss'
+	at org.java.calculator.EmployeeTest.getEmployeeWithInvalidRuleTest(EmployeeTest.java:69)
+</error>
+  </testcase>
+  <testcase name="getEmployeeWithEmptySurnameTest" classname="org.java.calculator.EmployeeTest" time="0">
+    <error message="Il cognome non può essere vuoto" type="java.lang.Exception">java.lang.Exception: Il cognome non può essere vuoto
+	at org.java.calculator.EmployeeTest.getEmployeeWithEmptySurnameTest(EmployeeTest.java:37)
+</error>
+  </testcase>
+  <testcase name="getEmployeeWithFutureDateTest" classname="org.java.calculator.EmployeeTest" time="0.001">
+    <error message="La data di nascita deve essere nel passato" type="java.lang.Exception">java.lang.Exception: La data di nascita deve essere nel passato
+	at org.java.calculator.EmployeeTest.getEmployeeWithFutureDateTest(EmployeeTest.java:53)
+</error>
+  </testcase>
+  <testcase name="getEmployeeWithEmptyNameTest" classname="org.java.calculator.EmployeeTest" time="0.002">
+    <error message="Il nome non può essere vuoto" type="java.lang.Exception">java.lang.Exception: Il nome non può essere vuoto
+	at org.java.calculator.EmployeeTest.getEmployeeWithEmptyNameTest(EmployeeTest.java:21)
+</error>
   </testcase>
 </testsuite>

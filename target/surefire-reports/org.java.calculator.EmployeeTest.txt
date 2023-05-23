@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: org.java.calculator.EmployeeTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 4, Skipped: 0, Time elapsed: 0.006 s <<< FAILURE! - in org.java.calculator.EmployeeTest
+getEmployeeWithInvalidRuleTest  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.Exception: Il ruolo deve essere 'employee' o 'boss'
+	at org.java.calculator.EmployeeTest.getEmployeeWithInvalidRuleTest(EmployeeTest.java:69)
+
+getEmployeeWithEmptySurnameTest  Time elapsed: 0 s  <<< ERROR!
+java.lang.Exception: Il cognome non può essere vuoto
+	at org.java.calculator.EmployeeTest.getEmployeeWithEmptySurnameTest(EmployeeTest.java:37)
+
+getEmployeeWithFutureDateTest  Time elapsed: 0.001 s  <<< ERROR!
+java.lang.Exception: La data di nascita deve essere nel passato
+	at org.java.calculator.EmployeeTest.getEmployeeWithFutureDateTest(EmployeeTest.java:53)
+
+getEmployeeWithEmptyNameTest  Time elapsed: 0.002 s  <<< ERROR!
+java.lang.Exception: Il nome non può essere vuoto
+	at org.java.calculator.EmployeeTest.getEmployeeWithEmptyNameTest(EmployeeTest.java:21)
+
